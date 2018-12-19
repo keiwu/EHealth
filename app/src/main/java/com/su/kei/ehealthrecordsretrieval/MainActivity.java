@@ -2,6 +2,8 @@ package com.su.kei.ehealthrecordsretrieval;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import adapter.PatientAdapter;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity{
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
     private ProgressBar progressBar;
+    private TextView failToRetrieveTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recyclerView);
         progressBar = findViewById(R.id.getPatientPb);
+        failToRetrieveTv = findViewById(R.id.failToRetrieveTv);
         linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         getPatients();
@@ -54,6 +58,9 @@ public class MainActivity extends AppCompatActivity{
 
                          @Override
                          public void onFailure(Call<Patients> call, Throwable t) {
+                             progressBar.setVisibility(View.INVISIBLE);
+                             failToRetrieveTv.setVisibility(View.VISIBLE);
+                             Toast.makeText(getApplicationContext(), getString(R.string.fail_to_retrieve_records), Toast.LENGTH_LONG).show();
                          }
                      }
         );
