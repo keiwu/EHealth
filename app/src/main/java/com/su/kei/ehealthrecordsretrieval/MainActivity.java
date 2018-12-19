@@ -6,6 +6,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+import Util.Utils;
 import adapter.PatientAdapter;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -48,6 +52,7 @@ public class MainActivity extends AppCompatActivity{
                              progressBar.setVisibility(View.INVISIBLE);
                              ArrayList<Patients.EPatient> patientAl;
                              patientAl = response.body().getEntry();
+                             patientAl = Utils.sortPatientList(patientAl);
                              PatientAdapter adapter = new PatientAdapter(getApplicationContext(), patientAl);
                              recyclerView.setAdapter(adapter);
                              recyclerView.setLayoutManager(linearLayoutManager);
