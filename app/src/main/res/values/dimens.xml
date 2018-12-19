@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding">25dp</dimen>
+    <dimen name="cardview_corner_radius">10dp</dimen>
+    <dimen name="image_size">80dp</dimen>
+    <dimen name="margin">5dp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="margin_top_detail">20dp</dimen>
+</resources>

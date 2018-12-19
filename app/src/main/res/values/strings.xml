@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">eHealthRecordsRetrieval</string>
+    <string name="patient_id">Patient:</string>
+    <string name="patient_gender">Gender:</string>
+    <string name="patient_birthdate">Birthdate:</string>
+    <string name="back">Back</string>
+</resources>
