@@ -5,4 +5,5 @@
     <string name="patient_birthdate">Birthdate:</string>
     <string name="back">Back</string>
     <string name="fail_to_retrieve_records">Fail to retrieve records!</string>
+    <string name="patient">Patient:</string>
 </resources>

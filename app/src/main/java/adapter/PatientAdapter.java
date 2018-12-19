@@ -41,11 +41,10 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
     @Override
     public void onBindViewHolder(PatientViewHolder holder, int position) {
         final Patients.EPatient current = patientAl.get(position);
-        holder.userNameTv.setText("User " + current.getResource().getId());
+        holder.userNameTv.setText(context.getString(R.string.patient) + current.getResource().getId());
         holder.parentLl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("Adapter", "user : " + current.getResource().getId());
                 Intent intent = new Intent(context, DetailActivity.class);
                 intent.putExtra(PATIENT_ID, current.getResource().getId());
                 intent.putExtra(PATIENT_GENDER, current.getResource().getGender());
