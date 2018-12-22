@@ -42,6 +42,7 @@ public class SearchPresenter {
         );
     }
 
+
     public interface SearchView {
        void onItemRetrieved(ArrayList<Patients.EPatient> patientsAl);
     }
