@@ -11,6 +11,7 @@ Retrieve sample EHeath records using Retrofit and display using RecyclerView
     6. Technologies used: Retrofit for RESTful service, RecyclverView for display list
        of patients, CardView for display each patient in list, Circleimageview for display 
        circular image; Junit for unit test
+    7. Use of the MVP design pattern
 
     
 
